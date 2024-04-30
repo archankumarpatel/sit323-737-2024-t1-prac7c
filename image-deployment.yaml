@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: archan-microservice
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: archan-microservice
+  template:
+    metadata:
+      labels:
+        app: archan-microservice
+    spec:
+      containers:
+      - name: archan-microservice
+        image: as222472055/image1
+        ports:
+        - containerPort: 8080
